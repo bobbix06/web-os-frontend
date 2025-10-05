@@ -8,25 +8,20 @@
 </head>
 <body>
 
-<!-- Boot Screen -->
 <div class="boot-screen" id="bootScreen">
     <p>Loading Web OS...</p>
     <div class="loading-bar"></div>
 </div>
 
-<!-- Lock/Login Screen -->
 <div class="lock-screen" id="lockScreen">
     <div class="login-card">
         <div class="welcome-text">Welcome</div>
         <div class="os-name">Web OS</div>
-        <div class="spinner">
-            <div></div><div></div><div></div>
-        </div>
+        <div class="spinner"><div></div><div></div><div></div></div>
         <input type="password" id="passwordInput" class="password-input" placeholder="Enter Password" onkeypress="checkPassword(event)">
     </div>
 </div>
 
-<!-- Desktop -->
 <div class="desktop" id="desktop">
     <div class="taskbar">
         <div class="start-button" onclick="toggleStartMenu()">Start</div>
@@ -43,16 +38,9 @@
     </div>
 </div>
 
-<!-- Apps -->
-<div class="app" id="internetApp" style="display:none;">
-    <iframe src="about:blank"></iframe>
-</div>
-<div class="app" id="settingsApp" style="display:none;">
-    <p>Settings App</p>
-</div>
-<div class="app" id="userManagement" style="display:none;">
-    <p>User Management</p>
-</div>
+<div class="app" id="internetApp"><iframe src="about:blank"></iframe></div>
+<div class="app" id="settingsApp"><p>Settings App</p></div>
+<div class="app" id="userManagement"><p>User Management</p></div>
 
 <script src="script.js"></script>
 </body>
