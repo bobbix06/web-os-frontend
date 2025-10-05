@@ -7,49 +7,52 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Boot Screen -->
-    <div class="boot-screen" id="bootScreen">
-        <p>Loading Web OS...</p>
-        <div class="loading-bar"></div>
-    </div>
 
-    <!-- Lock Screen -->
-    <div class="lock-screen" id="lockScreen">
-        <div class="lock-time" id="lockTime"></div>
-        <div class="lock-date" id="lockDate"></div>
+<!-- Boot Screen -->
+<div class="boot-screen" id="bootScreen">
+    <p>Loading Web OS...</p>
+    <div class="loading-bar"></div>
+</div>
+
+<!-- Lock/Login Screen -->
+<div class="lock-screen" id="lockScreen">
+    <div class="login-card">
+        <div class="welcome-text">Welcome</div>
+        <div class="os-name">Web OS</div>
+        <div class="spinner">
+            <div></div><div></div><div></div>
+        </div>
         <input type="password" id="passwordInput" class="password-input" placeholder="Enter Password" onkeypress="checkPassword(event)">
     </div>
+</div>
 
-    <!-- Desktop -->
-    <div class="desktop" id="desktop">
-        <div class="taskbar">
-            <div class="start-button" onclick="toggleStartMenu()">Start</div>
-            <div id="startMenu" class="start-menu">
-                <div onclick="openApp('internetApp')">🌐 Internet</div>
-                <div onclick="openApp('settingsApp')">⚙ Settings</div>
-                <div onclick="openApp('userManagement')">👤 Users</div>
-            </div>
-            <div class="shutdown-button" onclick="toggleShutdownMenu()">⏻</div>
+<!-- Desktop -->
+<div class="desktop" id="desktop">
+    <div class="taskbar">
+        <div class="start-button" onclick="toggleStartMenu()">Start</div>
+        <div id="startMenu" class="start-menu">
+            <div onclick="openApp('internetApp')">🌐 Internet</div>
+            <div onclick="openApp('settingsApp')">⚙ Settings</div>
+            <div onclick="openApp('userManagement')">👤 Users</div>
         </div>
+        <div class="shutdown-button" onclick="toggleShutdownMenu()">⏻</div>
         <div id="shutdownMenu" class="shutdown-menu">
             <div onclick="shutdownOS()">Shutdown</div>
             <div onclick="restartOS()">Restart</div>
         </div>
     </div>
+</div>
 
-    <!-- Apps -->
-    <div class="app" id="internetApp" style="display: none;">
-        <iframe src="https://www.google.com"></iframe>
-    </div>
-    <div class="app" id="settingsApp" style="display: none;">
-        <p>Settings App - Change Wallpaper & Theme</p>
-    </div>
-    <div class="app" id="userManagement" style="display: none;">
-        <p>User Management</p>
-        <button onclick="addUser()">Add User</button>
-        <button onclick="removeUser()">Remove User</button>
-        <button onclick="changePassword()">Change Password</button>
-    </div>
+<!-- Apps -->
+<div class="app" id="internetApp" style="display:none;">
+    <iframe src="about:blank"></iframe>
+</div>
+<div class="app" id="settingsApp" style="display:none;">
+    <p>Settings App</p>
+</div>
+<div class="app" id="userManagement" style="display:none;">
+    <p>User Management</p>
+</div>
 
 <script src="script.js"></script>
 </body>
